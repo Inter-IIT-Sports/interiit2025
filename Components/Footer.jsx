@@ -25,8 +25,8 @@ export default function Footer() {
               height={100}
               className="object-contain bg-white rounded-b-sm p-2 mb-4"
             />
-            <h2 className="text-xl font-bold text-cyan-400">Inter IIT Sports Meet</h2>
-            <p className="text-gray-400 text-sm max-w-xs text-center md:text-left mt-2">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-400">Inter IIT Sports Meet</h2>
+            <p className="text-gray-400 text-[16px] max-w-xs text-center md:text-left mt-2">
               The annual sporting extravaganza bringing together athletes from all IITs
               to celebrate sportsmanship, excellence, and camaraderie.
             </p>
@@ -36,8 +36,8 @@ export default function Footer() {
           <div
 
             className="flex flex-col items-center md:items-start">
-            <h3 className="font-semibold text-lg mb-4 text-cyan-400">Quick Links</h3>
-            <ul className="flex flex-col items-center md:items-start space-y-2">
+            <h3 className="font-semibold text-2xl mb-4 text-cyan-400">Quick Links</h3>
+            <ul className="flex flex-col items-center text-[18px] md:items-start space-y-2">
               <li>
                 <Link href="/About" className="text-gray-200  hover:text-[1.05rem] transition-colors duration-300 py-1">
                   About
@@ -63,7 +63,7 @@ export default function Footer() {
 
           {/* Social Media Section */}
           <div className="flex flex-col justify-center items-center md:items-start">
-            <h3 className="font-semibold text-lg mb-4 text-cyan-400">Connect With Us</h3>
+            <h3 className="font-semibold text-2xl mb-4 text-cyan-400">Connect With Us</h3>
             <div className="flex space-x-4 mb-4">
               <a
                 href="https://www.instagram.com/interiit_sportsmeet_2025?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"
@@ -107,41 +107,55 @@ export default function Footer() {
 
 
             {/* reach us */}
-            <h3 className="font-semibold text-lg mb-4 text-cyan-400">Reach  Us</h3>
+            <h3 className="font-semibold text-2xl mb-4 text-cyan-400">Reach  Us</h3>
             <div>
-              <ul className="space-y-3 text-sm">
+              <ul className="space-y-3">
                 <li className="flex items-center gap-2">
                   {/* Mail Icon */}
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12H8m8-4H8m-2 8h12M5 6h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z" />
                   </svg>
                   <a href="mailto:contact@interiit.com" className="hover:text-white transition">
                     interiitoc2025@smail.iitm.ac.in
                   </a>
                 </li>
-
-                {/* Phone with Name */}
                  <li className="flex items-center gap-2">
                   {/* Phone Icon */}
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.684l1.518 4.554a1 1 0 01-.21.98l-2.272 2.272a16 16 0 006.586 6.586l2.272-2.272a1 1 0 01.98-.21l4.554 1.518A1 1 0 0121 18.72V22a2 2 0 01-2 2h-1C9.163 24 0 14.837 0 4V3a2 2 0 012-2h1z" />
                   </svg>
                   <div>
-                    <div className="font-medium text-white">Imran</div>
-                    <div className="text-sm text-gray-300">Devops head</div>
-                    <a href="tel:+91 9392309422" className="hover:text-white transition block">
+                    <div className="font-medium text-[16px] text-white">Prabhanjana</div>
+                    <div className="text-sm text-[15px] text-gray-300">Sports secretary</div>
+
+                    <a href="tel:+919413521145" className="hover:text-white transition block">
+                      +91 6369132997
+                    </a>
+                  </div>
+                </li>
+
+                {/* Phone with Name */}
+                <li className="flex items-center gap-2 ">
+                  {/* Phone Icon */}
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.684l1.518 4.554a1 1 0 01-.21.98l-2.272 2.272a16 16 0 006.586 6.586l2.272-2.272a1 1 0 01.98-.21l4.554 1.518A1 1 0 0121 18.72V22a2 2 0 01-2 2h-1C9.163 24 0 14.837 0 4V3a2 2 0 012-2h1z" />
+                  </svg>
+                  <div>
+                    <div className="font-medium text-[16px] text-white">Imran</div>
+                    <div className="text-[15px] text-gray-300">Development operations head</div>
+                    <a href="tel:+91 9392309422" className="hover:text-white transition block text-[16px]">
                       +91 9392309422
                     </a>
                   </div>
                 </li>
                 <li className="flex items-center gap-2">
                   {/* Phone Icon */}
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 " fill="None" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 " fill="None" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.684l1.518 4.554a1 1 0 01-.21.98l-2.272 2.272a16 16 0 006.586 6.586l2.272-2.272a1 1 0 01.98-.21l4.554 1.518A1 1 0 0121 18.72V22a2 2 0 01-2 2h-1C9.163 24 0 14.837 0 4V3a2 2 0 012-2h1z" />
                   </svg>
                   <div>
-                    <div className="font-medium text-white">Ankit Raj</div>
-                    <div className="text-sm text-gray-300">Organising commitee head</div>
+                    <div className="font-medium text-[16px] text-white">Ankit Raj</div>
+                    <div className="text-sm text-[15px] text-gray-300">Organising commitee head</div>
 
                     <a href="tel:+919801015559" className="hover:text-white transition block">
                       +91 9801015559
@@ -151,26 +165,26 @@ export default function Footer() {
 
                 <li className="flex items-center gap-2">
                   {/* Phone Icon */}
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.684l1.518 4.554a1 1 0 01-.21.98l-2.272 2.272a16 16 0 006.586 6.586l2.272-2.272a1 1 0 01.98-.21l4.554 1.518A1 1 0 0121 18.72V22a2 2 0 01-2 2h-1C9.163 24 0 14.837 0 4V3a2 2 0 012-2h1z" />
                   </svg>
                   <div>
-                    <div className="font-medium text-white">Priyasha</div>
-                    <div className="text-sm text-gray-300">Organising commitee head</div>
+                    <div className="font-medium text-[16px] text-white">Priyasha</div>
+                    <div className="text-sm text-[15px] text-gray-300">Organising commitee head</div>
 
                     <a href="tel:+919413521145" className="hover:text-white transition block">
                       +91 9413521145
                     </a>
                   </div>
                 </li>
-               
+
 
                 <li className="flex items-center gap-2">
                   {/* Map Pin Icon */}
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3zm0 0c-4.418 0-8 3.582-8 8a1 1 0 001 1h14a1 1 0 001-1c0-4.418-3.582-8-8-8z" />
                   </svg>
-                  IIT Madras, Chennai, India
+                  <span className='text-[16px]'>IIT Madras, Chennai, India</span>
                 </li>
               </ul>
             </div>
@@ -185,8 +199,8 @@ export default function Footer() {
 
         {/* Copyright Section */}
         <div className="flex flex-col md:flex-row justify-center items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {currentYear} <span className="text-cyan-400 font-semibold">InterIIT sporst meet</span>. All Rights Reserved.
+          <p className="text-gray-400 text-[15px] mb-4 md:mb-0">
+            © {currentYear} <span className="text-cyan-400 font-semibold">InterIIT sports meet</span>. All Rights Reserved.
           </p>
         </div>
       </motion.div>

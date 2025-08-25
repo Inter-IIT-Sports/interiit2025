@@ -19,7 +19,10 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "InterIIT Sports Meet",
-description: "The Inter IIT Sports Meet is the premier annual sporting event of all Indian Institutes of Technology, uniting athletes across IITs in a celebration of competition, teamwork, and excellence."
+description: "The Inter IIT Sports Meet is the premier annual sporting event of all Indian Institutes of Technology, uniting athletes across IITs in a celebration of competition, teamwork, and excellence.",
+  icons: {
+    icon: "/logo_2.png", // your logo path in public folder
+  },
 };
 
 export default function RootLayout({ children }) {

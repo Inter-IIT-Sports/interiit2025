@@ -45,7 +45,7 @@ const Navbar = () => {
               {/* <div className="text-1xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
                 IISM 2025
               </div> */}
-              <div className="text-1xl  text-shadow-gray-700 font-bold">
+              <div className="text-2xl  text-shadow-gray-700 font-bold">
                 Inter IIT Sports Meet
               </div>
             </div>
@@ -62,7 +62,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className=" relative  text-gray-700  hover:text-shadow-gray-400 transition-colors duration-300 py-2
+                className=" relative  text-gray-700 text-[18px]  hover:text-shadow-gray-400 transition-colors duration-300 py-2
                   after:content-[''] after:block after:w-0 after:h-0.5 after:bg-gray-700 
                   after:transition-all after:duration-300 hover:after:w-full"
               >
@@ -119,7 +119,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-shadow-gray-700 font-medium hover:text-blue-600 transition-colors duration-300 py-2 border-b border-gray-500"
+                className="text-shadow-gray-700  text-lg font-medium hover:text-blue-600 transition-colors duration-300 py-2 border-b border-gray-500"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
