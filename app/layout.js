@@ -21,7 +21,7 @@ export const metadata = {
   title: "InterIIT Sports Meet",
 description: "The Inter IIT Sports Meet is the premier annual sporting event of all Indian Institutes of Technology, uniting athletes across IITs in a celebration of competition, teamwork, and excellence.",
   icons: {
-    icon: "/logo_2.png", // your logo path in public folder
+    icon: "/android-chrome-512x512.png", // your logo path in public folder
   },
 };
 

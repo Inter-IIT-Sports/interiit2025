@@ -25,7 +25,7 @@ export default function Footer() {
               height={100}
               className="object-contain bg-white rounded-b-sm p-2 mb-4"
             />
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cyan-400">Inter IIT Sports Meet</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-3xl font-bold text-cyan-400">Inter IIT Sports Meet</h2>
             <p className="text-gray-400 text-[16px] max-w-xs text-center md:text-left mt-2">
               The annual sporting extravaganza bringing together athletes from all IITs
               to celebrate sportsmanship, excellence, and camaraderie.

@@ -24,20 +24,20 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="cursor-pointer bg-gray-100  font-bold backdrop-blur-md shadow-lg sticky top-0 z-50 border-b-2 border-gray-300" 
-     style={{"fontFamily": "'Lora', serif"}}>
+    <nav className="cursor-pointer bg-gray-100  font-bold backdrop-blur-md shadow-lg sticky top-0 z-50 border-b-2 border-gray-300"
+      style={{ "fontFamily": "'Lora', serif" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
 
           {/* Logo and Title */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 ">
             {/* Logo */}
             <Image
               src="/logo_2.png"  // logo in public/
               alt="IISM Logo"
-              width={52}
-              height={52}
-              className="object-contain"
+              width={200}
+              height={200}
+              className="w-10 sm:w-12 md:w-14 lg:w-16 h-auto object-contain"
             />
 
             {/* Text */}
@@ -45,7 +45,7 @@ const Navbar = () => {
               {/* <div className="text-1xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
                 IISM 2025
               </div> */}
-              <div className="text-2xl  text-shadow-gray-700 font-bold">
+              <div className="lg:text-2xl sm:text-[1.39rem] text-shadow-gray-700 font-bold">
                 Inter IIT Sports Meet
               </div>
             </div>
@@ -119,7 +119,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-shadow-gray-700  text-lg font-medium hover:text-blue-600 transition-colors duration-300 py-2 border-b border-gray-500"
+                className="text-gray-700  text-lg  hover:text-[19px] transition-colors duration-300 py-2 border-b border-gray-500"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
