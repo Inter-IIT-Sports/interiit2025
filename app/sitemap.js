@@ -1,6 +1,6 @@
 // app/sitemap.js
 export default function sitemap() {
-    const baseurl="https://interiitsports.com/"
+    const baseurl="https://interiitsports.com"
   return [
     {
       url:baseurl, // your domain
