@@ -1,27 +1,29 @@
-"use client";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+// app/page.js (Server Component – can have metadata)
+export const metadata = {
+  title: "Inter IIT Sports Meet 2025",
+  description:
+    "The official website for Inter IIT Sports Meet 2025. Explore events, results, schedules, and more.",
+  openGraph: {
+    title: "Inter IIT Sports Meet 2025",
+    description:
+    "The official Inter IIT Sports Meet 2025 website with schedules, results, and announcements.",
+    url: "https://interiitsports.com",
+    siteName: "Inter IIT Sports Meet",
+    images: [
+      {
+        url: "/android-chrome-512x512.png",
+        width: 512,
+        height: 512,
+        alt: "Inter IIT Sports Meet 2025 Logo",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+};
+
+import Home from "../Components/Home/HomePage";
 
 export default function HomePage() {
-  const [currentHostIndex, setCurrentHostIndex] = useState(0);
-
-  const hostIITs = [
-    { name: "IIT Madras", year: "2025" },
-    { name: "IIT Hyderabad", year: "2025" },
-    { name: "IIT Tirupati", year: "2025" },
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentHostIndex((prev) =>
-        prev === hostIITs.length - 1 ? 0 : prev + 1
-      );
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [hostIITs.length]);
-
-  return (
-    <>
-    </>
-  );
+  // return <Home />;
 }

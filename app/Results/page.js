@@ -1,8 +1,16 @@
 import React from "react";
 
 const Results = () => (
-    <div className="min-h-[calc(100vh-13rem)]"></div>
+    <div className=""></div>
 
 );
 
 export default Results;
+
+
+
+export const metadata = {
+  title: "Results | Inter IIT Sports Meet",
+  description:
+    "Check the latest results of the Inter IIT Sports Meet, including scores, standings, and performance highlights from all participating IITs.",
+};

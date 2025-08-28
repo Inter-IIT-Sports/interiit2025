@@ -2,10 +2,14 @@
 import { useState, useEffect } from 'react';
 import Image from "next/image";
 import Link from 'next/link';
+import { usePathname } from "next/navigation";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname()
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,8 +22,8 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/About' },
-    { name: 'Results', href: '/Results' },
     { name: 'Rulebook', href: '/Rulebook' },
+    { name: 'Results', href: '/Results' },
     { name: 'Contact Us', href: '/Contact' },
   ];
 
@@ -62,9 +66,11 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className=" relative  text-gray-700 text-[18px]  hover:text-shadow-gray-400 transition-colors duration-300 py-2
+                className={`
+                  relative  text-gray-700 text-[18px]  hover:text-shadow-gray-400 transition-colors duration-300 py-2
                   after:content-[''] after:block after:w-0 after:h-0.5 after:bg-gray-700 
-                  after:transition-all after:duration-300 hover:after:w-full"
+                  after:transition-all after:duration-300 hover:after:w-full`
+                }
               >
                 {item.name}
               </a>
@@ -114,12 +120,16 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         < div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-96 opacity-100 py-4' : 'max-h-0 opacity-0 py-0'}`}>
-          <div className="flex flex-col space-y-4 px-2">
+          <div className="flex flex-col space-y-4 ">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700  text-lg  hover:text-[19px] transition-colors duration-300 py-2 border-b border-gray-500"
+                className={`${
+                  pathname === item.href
+                    ? 'bg-gray-700 text-white font-medium rounded-lg px-2 py-2'
+                    : 'hover:bg-gray-300  font-bold rounded-lg px-2 py-2'}
+                  text-gray-700  text-lg  px-2  transition-colors duration-300 py-2 border-b border-gray-500`}
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
