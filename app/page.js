@@ -25,5 +25,5 @@ export const metadata = {
 import Home from "../Components/Home/HomePage";
 
 export default function HomePage() {
-  // return <Home />;
+  return <Home />;
 }

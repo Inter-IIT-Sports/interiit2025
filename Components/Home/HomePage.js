@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function HeroSection() {
   const [timeLeft, setTimeLeft] = useState({
@@ -29,139 +30,96 @@ export default function HeroSection() {
     return () => clearInterval(timer);
   }, []);
 
+  const IITs = [
+    {
+      name: "IIT Hyderabad",
+      date: "Dec 14 – Dec 21, 2025",
+      venue: "Sports Complex, IIT Tirupathi, Kandi, 522084",
+      sports: ["Athletics(M & W)", " Volley Ball(M & W)", "Hockey(M)","Cricket(M)","Football(M)"],
+      logo: "/hyderabad.svg.png",
+
+    },
+    {
+      name: "IIT Madras",
+      date: "Dec 14 – Dec 21, 2025",
+      venue: "Sports complex, IIT Madras, Chennai,600036",
+      sports: ["Aqautics meet","Basket Ball(M & W)", "Table Tennis(M & W)", "Badminton(M & W)","sqaush(M & W)"],
+      logo: "/madras.svg.png",
+
+    },
+    {
+      name: "IIT Tirupathi",
+      date: "Dec 14 – Dec 21, 2025",
+      venue: "SNCC Sports Complex, IIT Hyderabad, Kandi, 522084",
+      sports: ["Chess", "Tennis(M & W)", "Weightlifting(M)"],
+      logo: "/iittp-logo.png",
+
+    },
+  ];
+
   return (
-    <section className="min-h-screen bg-gray-100 text-black flex justify-evenly">
-      <div className="max-w-7xl mx-auto px-6 py-16 w-full">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
-          {/* Left Column */}
-          <div className="w-full space-y-6">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-3">
-                58th Inter IIT Sports Meet 2025
-              </h1>
+    <section className="min-h-screen  text-black flex flex-col items-center py-16 px-6">
+      {/* Hero Text */}
+      <div className="max-w-3xl text-center space-y-6">
+        <h1 className="text-4xl md:text-5xl font-bold">
+          58th Inter IIT Sports Meet 2025
+        </h1>
+        <p className="text-gray-600 font-medium leading-relaxed">
+          The premier sporting event showcasing talent across all IITs. Join us
+          for a celebration of sportsmanship and excellence.
+        </p>
 
-            </div>
+        {/* Countdown */}
+        <div className="mt-4">
+          <h3 className="text-lg text-gray-700 mb-3 font-semibold">Event Starts In</h3>
+          <div className="flex gap-4 justify-center flex-wrap">
+            {Object.entries(timeLeft).map(([unit, value]) => (
+              <div
+                key={unit}
+                className="w-20 h-20 bg-gray-800 text-white rounded-xl flex flex-col items-center justify-center shadow-lg border border-gray-700"
+              >
+                <span className="text-2xl font-bold">{value}</span>
+                <span className="text-xs mt-1 text-gray-400">{unit.toUpperCase()}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
-            {/* Countdown */}
-            <div>
-              <h3 className="text-[17px] text-shadow-gray-900  mb-2">Event Starts In</h3>
-              <div className="flex gap-3">
-                {Object.entries(timeLeft).map(([unit, value]) => (
-                  <div key={unit} className="text-center">
-                    <div className="w-20 h-20 bg-gray-800 text-white rounded-lg flex flex-col items-center justify-center border border-gray-700">
-                      <span className="text-2xl font-bold">{value}</span>
-                      <span className="text-xs mt-1 text-gray-400">{unit.toUpperCase()}</span>
-                    </div>
-                  </div>
+      {/* Centered IIT Cards Section */}
+      <div className="mt-16 w-full overflow-x-auto">
+        <div className="flex lg:justify-center  gap-6 px-4">
+          {IITs.map((iit) => (
+            <div
+              key={iit.name}
+              className=" text-black  border border-gray-900 rounded-2xl p-6 w-64 flex flex-col shadow-lg hover:scale-105 transition-transform flex-shrink-0"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <Image
+                  src={iit.logo}
+                  alt={`${iit.name}`}
+                  width={55}
+                  height={55}
+                  // className="  rounded-full bg-white"
+                    style={{ objectFit: "contain" }}
+                />
+                <h2 className="text-xl font-bold">{iit.name}</h2>
+              </div >
+              <p className="text-sm text-gray-600 mb-2">{iit.date}</p>
+              <p className="text-sm text-gray-600 mb-3">{iit.venue}</p>
+              <p className="text-sm font-medium text-gray-500 mb-3">Featured Sports</p>
+              <div className="flex flex-wrap items-center gap-2">
+                {iit.sports.map((sport) => (
+                  <span
+                    key={sport}
+                    className="text-xs px-3 py-1 bg-gray-700 rounded-full text-white"
+                  >
+                    {sport}
+                  </span>
                 ))}
               </div>
             </div>
-
-            <p className="text-gray-500 font-medium leading-relaxed">
-              The premier sporting event showcasing talent across all IITs.
-              Join us for a celebration of sportsmanship and excellence.
-            </p>
-
-            {/* <div className="flex gap-4">
-              <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition">
-                Register Now
-              </button>
-              <button className="px-6 py-3 border border-gray-600 text-gray-300 font-medium rounded-lg hover:bg-gray-800 transition">
-                Learn More
-              </button>
-            </div> */}
-          </div>
-
-          {/* Right Column */}
-          <div className="w-full ">
-            <div className="flex flex-col md:grid-cols-2 gap-6">
-              {/* first row side by side */}
-              <div className="flex  md:grid-cols-2 gap-6 lg:flex-row lg:gap-4 mb-4">
-
-              {/* Aquatics Meet */}
-              <div className="bg-gray-800 border lg:w-[15rem] text-white border-gray-700 rounded-xl p-6  flex flex-col">
-                <div className="flex justify-start items-center gap-4 mb-4">
-                  <img
-                    src="/"
-                    alt="IIT Hyderabad Logo"
-                    className="bg-white text-black w-16 h-16 object-contain"
-                  />
-                  <h2 className="text-2xl font-bold mb-2">IIT Hyderabad</h2>
-                </div>
-                <p className="text-sm text-gray-400 mb-4">
-                  Dec 14 – Dec 21, 2025 | SNCC Sports Complex, IIT Hyderabad, Kandi, 522084
-                </p>
-                <p className="text-sm font-medium text-gray-300 mb-3">Featured Sports</p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {["Swimming", "Diving", "Water Polo"].map((sport) => (
-                    <span
-                      key={sport}
-                      className="text-xs px-3 py-1 bg-gray-700 rounded-full text-gray-200"
-                    >
-                      {sport}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Sports Meet */}
-              <div className="bg-gray-800 text-white border lg:w-[15rem] border-gray-700 rounded-xl p-6 flex flex-col">
-                <div className="flex justify-start items-center gap-4 mb-4">
-                  <img
-                    src="/"
-                    alt="IIT Hyderabad Logo"
-                    className="bg-white text-black w-16 h-16 object-contain"
-                  />
-                  <h2 className="text-2xl font-bold mb-2">IIT Madras</h2>
-                </div>
-                <p className="text-sm text-gray-400 mb-4">
-                  Dec 19 – 23, 2025 | Sports complex, IIT Madras, Chennai,600036
-                </p>
-                <p className="text-sm font-medium text-gray-300 mb-3">Featured sports</p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {["Athletics", "Badminton", "Cricket", "Basketball", "Tennis"].map((sport) => (
-                    <span
-                      key={sport}
-                      className="text-xs px-3 py-1 bg-gray-700 rounded-full text-gray-200"
-                    >
-                      {sport}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              </div>
-                  
-                  {/* second row  */}
-              <div  className="flex  justify-center md:grid-cols-2 gap-6 lg:flex-row lg:gap-4">
-
-
-              <div className="bg-gray-800 border lg:w-[15rem] text-white border-gray-700 rounded-xl p-6  flex flex-col">
-                <div className="flex justify-start items-center gap-4 mb-4">
-                  <img
-                    src="/"
-                    alt="IIT Hyderabad Logo"
-                    className="bg-white text-black w-16 h-16 object-contain"
-                  />
-                  <h2 className="text-2xl font-bold mb-2">IIT Tirupathi</h2>
-                </div>
-                <p className="text-sm text-gray-400 mb-4">
-                  Dec 14 – Dec 21, 2025 | SNCC Sports Complex, IIT Hyderabad, Kandi, 522084
-                </p>
-                <p className="text-sm font-medium text-gray-300 mb-3">Featured Sports</p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {["Swimming", "Diving", "Water Polo"].map((sport) => (
-                    <span
-                      key={sport}
-                      className="text-xs px-3 py-1 bg-gray-700 rounded-full text-gray-200"
-                    >
-                      {sport}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
