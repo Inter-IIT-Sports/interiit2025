@@ -19,12 +19,12 @@ export const metadata = {
     "The Inter IIT Sports Meet is the premier annual sporting event of all Indian Institutes of Technology, uniting athletes across IITs in a celebration of competition, teamwork, and excellence.",
   keywords:
     "Inter IIT Sports Meet, IIT Sports, Inter IITM 2025, Indian Institute of Technology sports, IIT tournament, student athletics, sports championship",
-  metadataBase: new URL("https://interiitsports.com"),
+  metadataBase: new URL("https://interiitsports.in"),
   openGraph: {
     title: "Inter IIT Sports Meet",
     description:
       "Annual Inter IIT Sports Meet – premier sporting championship uniting all IITs.",
-    url: "https://interiitsports.com",
+    url: "https://interiitsports.in",
     siteName: "Inter IIT Sports Meet",
     images: [
       {

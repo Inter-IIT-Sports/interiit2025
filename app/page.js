@@ -7,7 +7,7 @@ export const metadata = {
     title: "Inter IIT Sports Meet 2025",
     description:
     "The official Inter IIT Sports Meet 2025 website with schedules, results, and announcements.",
-    url: "https://interiitsports.com",
+    url: "https://interiitsports.in",
     siteName: "Inter IIT Sports Meet",
     images: [
       {
